@@ -1,0 +1,12 @@
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 1 : Found directive in column 1. (__CONFIG)
+Message[301] /Applications/microchip/mplabx/v3.50/mpasmx/P16F84.INC 34 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 15 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 22 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 25 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[202] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 27 : Argument out of range.  Least significant bits used.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 28 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 44 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 46 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 48 : Using default destination of 1 (file).
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm 55 : Found directive in column 1. (END)

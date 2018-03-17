@@ -1,0 +1,62 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Fri Apr  7 15:19:42 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000154
+                   .cinit    romdata   0x0000aa    program   0x000004
+.config_2007_BUILD/DEFAULT/DEBUG/RE2.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0000ab      
+                            0x002007    0x002007      
+            173 out of 1094 program addresses used, program memory utilization is 15%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                        A   0x000053    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                     ALGO   0x0000a8    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                   BCDa7S   0x000098    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                    CFLAG   0x0000a4    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                     DECS   0x000021    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RA   0x000016    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RB   0x00001a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RC   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                    RELOJ   0x00000b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RH   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                      RH2   0x00000f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       TA   0x00005b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       TB   0x00005d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+          shineForASecond   0x000059    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                    RELOJ   0x00000b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                      RH2   0x00000f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RH   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RA   0x000016    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RB   0x00001a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       RC   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                     DECS   0x000021    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                        A   0x000053    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+          shineForASecond   0x000059    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       TA   0x00005b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                       TB   0x00005d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                   BCDa7S   0x000098    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                    CFLAG   0x0000a4    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+                     ALGO   0x0000a8    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm
+
+

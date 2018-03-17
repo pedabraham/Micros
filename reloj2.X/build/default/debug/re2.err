@@ -1,0 +1,23 @@
+Message[301] /Applications/microchip/mplabx/v3.50/mpasmx/P16F84.INC 34 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 35 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 36 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 78 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 80 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 84 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 85 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 87 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 93 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 94 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 96 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 102 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 103 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 105 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 112 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 113 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 115 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 126 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 127 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 129 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 222 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 224 : Using default destination of 1 (file).
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/reloj2.X/re2.asm 251 : Found directive in column 1. (END)

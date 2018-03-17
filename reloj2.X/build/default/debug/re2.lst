@@ -1,0 +1,480 @@
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+2007   3FF1           00001     __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+                      00002     LIST P=16F84A
+                      00003     INCLUDE <P16F84.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Nov 17 2016
+                      00005 ;  MPASM PIC16F84 processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2016 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+                      00207         LIST
+                      00004     
+                      00005     ORG 0
+                      00006     
+                      00007    
+  0000000C            00008 UNIDADES_SEGUNDOS   EQU 0X0C
+  0000000D            00009 DECENAS_SEGUNDOS    EQU 0X0D
+  0000000E            00010 UNIDADES_MINUTOS    EQU 0X0E
+  0000000F            00011 DECENAS_MINUTOS     EQU 0X0F
+  00000010            00012 CONTSU              EQU 0X10
+  00000011            00013 CONTSD              EQU 0X11
+  00000012            00014 CONTMU              EQU 0X12
+  00000013            00015 CONTMD              EQU 0X13
+  00000014            00016 RealT1              EQU 0X14
+  00000015            00017 RealT2              EQU 0X15
+  00000016            00018 RealT3              EQU 0X16
+  00000017            00019 RCOM                EQU 0X17
+  00000018            00020 UNIDADES_HORAS      EQU 0X18
+  00000019            00021 DECENAS_HORAS       EQU 0X19
+  0000001A            00022 CONTHU              EQU 0X1A
+  0000001B            00023 CONTHD              EQU 0X1B
+  0000001C            00024 CONTSD2             EQU 0X1C; HACER LOS CONTADORES COMPLEMENTARIOS DEL LOS CONTADORES RESTANTES
+  0000001D            00025 FLAG                EQU 0X1D
+  0000001E            00026 CONTMU2             EQU 0X1E
+  0000001F            00027 CONTMD2             EQU 0X1F
+  00000020            00028 CONTHU2             EQU 0X20
+  00000021            00029 CONTHD2             EQU 0X21    
+                      00030                 
+                      00031                     
+                      00032         
+0000                  00033 INICIO
+0000   1683           00034     BSF STATUS,RP0
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0186           00035     CLRF        TRISB
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   0185           00036     CLRF        TRISA
+0003   1283           00037     BCF STATUS,RP0
+                      00038 
+                      00039 
+0004   018C           00040     CLRF        UNIDADES_SEGUNDOS
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0005   018E           00041     CLRF        UNIDADES_MINUTOS
+0006   018D           00042     CLRF        DECENAS_SEGUNDOS
+0007   018F           00043     CLRF        DECENAS_MINUTOS
+0008   0198           00044     CLRF        UNIDADES_HORAS
+0009   0199           00045     CLRF        DECENAS_HORAS
+000A   019D           00046     CLRF        FLAG
+                      00047     
+                      00048         
+000B                  00049 RELOJ
+000B   0199           00050     CLRF        DECENAS_HORAS
+000C   3002           00051     MOVLW       D'2'
+000D   009B           00052     MOVWF       CONTHD
+000E   00A1           00053     MOVWF       CONTHD2
+000F                  00054 RH2    
+000F   300A           00055     MOVLW       D'10'
+0010   009A           00056     MOVWF       CONTHU
+0011   00A0           00057     MOVWF       CONTHU2
+0012                  00058 RH
+0012   3006           00059     MOVLW       D'6'
+0013   0093           00060     MOVWF       CONTMD
+0014   009F           00061     MOVWF       CONTMD2
+0015   018F           00062     CLRF        DECENAS_MINUTOS
+0016                  00063 RA
+0016   300A           00064     MOVLW       D'10'
+0017   0092           00065     MOVWF       CONTMU
+0018   009E           00066     MOVWF       CONTMU2
+0019   018E           00067     CLRF        UNIDADES_MINUTOS
+001A                  00068 RB
+001A   3006           00069     MOVLW       D'6'
+001B   0091           00070     MOVWF       CONTSD
+001C   009C           00071     MOVWF       CONTSD2
+001D   018D           00072     CLRF        DECENAS_SEGUNDOS
+001E                  00073 RC
+001E   3009           00074     MOVLW       D'9'
+001F   0090           00075     MOVWF       CONTSU
+0020   018C           00076     CLRF        UNIDADES_SEGUNDOS
+0021                  00077 DECS
+Message[305]: Using default destination of 1 (file).
+0021   0A8C           00078     INCF        UNIDADES_SEGUNDOS   ;SEGUNDO REG 0C
+0022   2???           00079     CALL        shineForASecond
+Message[305]: Using default destination of 1 (file).
+0023   0B90           00080     DECFSZ      CONTSU
+0024   2???           00081     GOTO        DECS
+                      00082     
+0025   018C           00083     CLRF        UNIDADES_SEGUNDOS ;SEGUNDOS DECENAS, 0D
+Message[305]: Using default destination of 1 (file).
+0026   0A8D           00084     INCF        DECENAS_SEGUNDOS
+Message[305]: Using default destination of 1 (file).
+0027   0B91           00085     DECFSZ      CONTSD
+0028   2???           00086     CALL        shineForASecond
+Message[305]: Using default destination of 1 (file).
+0029   0B9C           00087     DECFSZ      CONTSD2
+002A   2???           00088     GOTO        RC
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00089     
+                      00090     
+002B   018C           00091     CLRF        UNIDADES_SEGUNDOS
+002C   018D           00092     CLRF        DECENAS_SEGUNDOS    ;MINUTOS UNIDADES
+Message[305]: Using default destination of 1 (file).
+002D   0A8E           00093     INCF        UNIDADES_MINUTOS
+Message[305]: Using default destination of 1 (file).
+002E   0B9E           00094     DECFSZ      CONTMU2
+002F   2???           00095     CALL        shineForASecond
+Message[305]: Using default destination of 1 (file).
+0030   0B92           00096     DECFSZ      CONTMU
+0031   2???           00097     GOTO        RB
+                      00098     
+0032   018C           00099     CLRF        UNIDADES_SEGUNDOS
+0033   018D           00100     CLRF        DECENAS_SEGUNDOS 
+0034   018E           00101     CLRF        UNIDADES_MINUTOS    ;MINUTOS DECENAS
+Message[305]: Using default destination of 1 (file).
+0035   0A8F           00102     INCF        DECENAS_MINUTOS
+Message[305]: Using default destination of 1 (file).
+0036   0B9F           00103     DECFSZ      CONTMD2
+0037   2???           00104     CALL        shineForASecond
+Message[305]: Using default destination of 1 (file).
+0038   0B93           00105     DECFSZ      CONTMD
+0039   2???           00106     GOTO        RA
+                      00107     
+003A   018C           00108     CLRF        UNIDADES_SEGUNDOS
+003B   018D           00109     CLRF        DECENAS_SEGUNDOS 
+003C   018E           00110     CLRF        UNIDADES_MINUTOS 
+003D   018F           00111     CLRF        DECENAS_MINUTOS     ;HORAS UNIDADES
+Message[305]: Using default destination of 1 (file).
+003E   0A98           00112     INCF        UNIDADES_HORAS 
+Message[305]: Using default destination of 1 (file).
+003F   0BA0           00113     DECFSZ      CONTHU2
+0040   2???           00114     CALL        shineForASecond
+Message[305]: Using default destination of 1 (file).
+0041   0B9A           00115     DECFSZ      CONTHU
+0042   2???           00116     GOTO        RH
+                      00117     
+0043   181D           00118     BTFSC       FLAG,0
+0044   2???           00119     GOTO        A
+                      00120         
+0045   018C           00121     CLRF        UNIDADES_SEGUNDOS
+0046   018D           00122     CLRF        DECENAS_SEGUNDOS 
+0047   018E           00123     CLRF        UNIDADES_MINUTOS 
+0048   018F           00124     CLRF        DECENAS_MINUTOS 
+0049   0198           00125     CLRF        UNIDADES_HORAS      ;HORAS DECENAS
+Message[305]: Using default destination of 1 (file).
+004A   0A99           00126     INCF        DECENAS_HORAS
+Message[305]: Using default destination of 1 (file).
+004B   0BA1           00127     DECFSZ      CONTHD2
+004C   2???           00128     CALL        shineForASecond
+Message[305]: Using default destination of 1 (file).
+004D   0B9B           00129     DECFSZ      CONTHD
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+004E   2???           00130     GOTO        RH2
+                      00131    
+004F   3004           00132     MOVLW       D'4'
+0050   009A           00133     MOVWF       CONTHU
+0051   141D           00134     BSF         FLAG,0
+0052   2???           00135     GOTO        RH
+                      00136     
+0053                  00137 A
+0053   018C           00138     CLRF        UNIDADES_SEGUNDOS
+0054   018D           00139     CLRF        DECENAS_SEGUNDOS 
+0055   018E           00140     CLRF        UNIDADES_MINUTOS 
+0056   018F           00141     CLRF        DECENAS_MINUTOS
+0057   0198           00142     CLRF        UNIDADES_HORAS
+0058   2???           00143     GOTO        RELOJ
+                      00144 
+0059                  00145 shineForASecond
+0059   3002           00146         MOVLW   D'2';109
+005A   0094           00147         MOVWF   RealT1
+005B                  00148 TA
+005B   3002           00149         MOVLW   D'2';235
+005C   0095           00150         MOVWF   RealT2
+005D                  00151 TB
+                      00152 ;       MOVLW   D'100'
+                      00153 ;       MOVWF   RealT3
+                      00154 ;    TC
+005D   301E           00155         MOVLW   B'11110'
+005E   0085           00156         MOVWF   PORTA
+005F   080C           00157         MOVF    UNIDADES_SEGUNDOS,0
+0060   2???           00158         CALL    BCDa7S
+0061   0097           00159         MOVWF   RCOM
+0062   0997           00160         COMF    RCOM,1
+0063   1797           00161         BSF     RCOM,7
+0064   0817           00162         MOVF    RCOM,0
+0065   0086           00163         MOVWF   PORTB
+                      00164         
+                      00165         
+0066   301D           00166         MOVLW   B'11101'
+0067   0085           00167         MOVWF   PORTA
+0068   080D           00168         MOVF    DECENAS_SEGUNDOS,0
+0069   2???           00169         CALL    BCDa7S
+006A   0097           00170         MOVWF   RCOM
+006B   0997           00171         COMF    RCOM,1
+006C   1797           00172         BSF     RCOM,7
+006D   0817           00173         MOVF    RCOM,0
+006E   0086           00174         MOVWF   PORTB
+                      00175         
+                      00176         
+006F   301B           00177         MOVLW   B'11011'
+0070   0085           00178         MOVWF   PORTA
+0071   080E           00179         MOVF    UNIDADES_MINUTOS,0
+0072   2???           00180         CALL    BCDa7S
+0073   0097           00181         MOVWF   RCOM
+0074   0997           00182         COMF    RCOM,1
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  5
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0075   1797           00183         BSF     RCOM,7
+0076   0817           00184         MOVF    RCOM,0
+0077   0086           00185         MOVWF   PORTB
+                      00186         
+                      00187         
+0078   3017           00188         MOVLW   B'10111'
+0079   0085           00189         MOVWF   PORTA
+007A   080F           00190         MOVF    DECENAS_MINUTOS,0
+007B   2???           00191         CALL    BCDa7S
+007C   0097           00192         MOVWF   RCOM
+007D   0997           00193         COMF    RCOM,1
+007E   1797           00194         BSF     RCOM,7
+007F   0817           00195         MOVF    RCOM,0
+0080   0086           00196         MOVWF   PORTB
+                      00197         ;DECFSZ RealT3
+                      00198         ;GOTO   TC
+                      00199         
+0081   300F           00200         MOVLW   B'01111'
+0082   0085           00201         MOVWF   PORTA
+0083   0818           00202         MOVF    UNIDADES_HORAS,0
+0084   2???           00203         CALL    BCDa7S
+0085   0097           00204         MOVWF   RCOM
+0086   0997           00205         COMF    RCOM,1
+0087   1797           00206         BSF     RCOM,7
+0088   0817           00207         MOVF    RCOM,0
+0089   0086           00208         MOVWF   PORTB
+                      00209         
+                      00210         
+008A   3000           00211         MOVLW   B'00000'
+008B   0085           00212         MOVWF   PORTA
+008C   0819           00213         MOVF    DECENAS_HORAS,0
+008D   2???           00214         CALL    BCDa7S
+008E   0097           00215         MOVWF   RCOM
+008F   0997           00216         COMF    RCOM,1
+0090   1397           00217         BCF     RCOM,7
+0091   0817           00218         MOVF    RCOM,0
+0092   0086           00219         MOVWF   PORTB
+                      00220         
+                      00221         
+Message[305]: Using default destination of 1 (file).
+0093   0B95           00222         DECFSZ  RealT2
+0094   2???           00223         GOTO    TB
+Message[305]: Using default destination of 1 (file).
+0095   0B94           00224         DECFSZ  RealT1
+0096   2???           00225         GOTO    TA
+0097   0008           00226         RETURN
+                      00227         
+0098                  00228 BCDa7S
+0098   0782           00229     ADDWF   PCL,F
+0099   34FC           00230     RETLW   h'FC';0
+009A   3460           00231     RETLW   h'60';1
+009B   34DA           00232     RETLW   h'DA';2
+009C   34F2           00233     RETLW   h'F2';3
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  6
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+009D   3466           00234     RETLW   h'66';4
+009E   34B6           00235     RETLW   h'B6';5
+009F   34BE           00236     RETLW   h'BE';6
+00A0   34E0           00237     RETLW   h'E0';7
+00A1   34FE           00238     RETLW   h'FE';8
+00A2   34F6           00239     RETLW   h'F6';9
+00A3   0008           00240     RETURN
+                      00241     
+00A4                  00242 CFLAG
+00A4   1C1D           00243      BTFSS  FLAG,0
+00A5   2???           00244      GOTO   ALGO   
+00A6   101D           00245      BCF    FLAG,0
+00A7   0008           00246      RETURN
+00A8                  00247 ALGO
+00A8   141D           00248      BSF    FLAG,0
+00A9   0008           00249      RETURN
+                      00250                 
+Warning[205]: Found directive in column 1. (END)
+3FF1                  00251 END
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+A                                 00000053
+ALGO                              000000A8
+BCDa7S                            00000098
+C                                 00000000
+CFLAG                             000000A4
+CONTHD                            0000001B
+CONTHD2                           00000021
+CONTHU                            0000001A
+CONTHU2                           00000020
+CONTMD                            00000013
+CONTMD2                           0000001F
+CONTMU                            00000012
+CONTMU2                           0000001E
+CONTSD                            00000011
+CONTSD2                           0000001C
+CONTSU                            00000010
+DC                                00000001
+DECENAS_HORAS                     00000019
+DECENAS_MINUTOS                   0000000F
+DECENAS_SEGUNDOS                  0000000D
+DECS                              00000021
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FLAG                              0000001D
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INICIO                            00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA                                00000016
+RA0                               00000000
+RA1                               00000001
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB                                0000001A
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RC                                0000001E
+RCOM                              00000017
+RD                                00000000
+RELOJ                             0000000B
+RH                                00000012
+RH2                               0000000F
+RP0                               00000005
+RP1                               00000006
+RealT1                            00000014
+RealT2                            00000015
+RealT3                            00000016
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TA                                0000005B
+TB                                0000005D
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+UNIDADES_HORAS                    00000018
+UNIDADES_MINUTOS                  0000000E
+UNIDADES_SEGUNDOS                 0000000C
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   4-7-2017  15:19:42         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+__DEBUG                           
+__MPLAB_DEBUGGER_SIMULATOR        1
+shineForASecond                   00000059
+
+Errors   :     0
+Warnings :     1 reported,     0 suppressed
+Messages :    22 reported,     0 suppressed
+
+

@@ -1,0 +1,48 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed Jun 21 15:10:35 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00004c
+                   .cinit    romdata   0x000026    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/SEGC.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000027      
+                            0x002007    0x002007      
+            41 out of 8454 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  GIRODER   0x000023    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                  GIROIZQ   0x000020    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                     PDER   0x00001b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                     PIZQ   0x000013    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                   PRUEBA   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                    RECTO   0x00000f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                    SIGUE   0x000006    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                    SIGUE   0x000006    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                   PRUEBA   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                    RECTO   0x00000f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                     PIZQ   0x000013    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                     PDER   0x00001b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                  GIROIZQ   0x000020    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+                  GIRODER   0x000023    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm
+
+

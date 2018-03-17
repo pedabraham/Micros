@@ -1,0 +1,15 @@
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 1 : Found directive in column 1. (__CONFIG)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 7 : Found label after column 1. (REGENT)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 9 : Found label after column 1. (INICIO)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 13 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 14 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 15 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 17 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 20 : Found label after column 1. (SIGUE)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 27 : Found label after column 1. (RC)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 37 : Found label after column 1. (RECTO)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 44 : Found label after column 1. (PIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 50 : Found label after column 1. (PDER)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 60 : Found label after column 1. (GIROIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 64 : Found label after column 1. (GIRODER)

@@ -1,0 +1,11 @@
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 1 : Found directive in column 1. (__CONFIG)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 6 : Found label after column 1. (REGENT)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 8 : Found label after column 1. (INICIO)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 17 : Found label after column 1. (SIGUE)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 34 : Found label after column 1. (PRUEBA)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 45 : Found label after column 1. (RECTO)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 54 : Found label after column 1. (PIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 65 : Found label after column 1. (PDER)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 75 : Found label after column 1. (GIROIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor3.X/segC.asm 80 : Found label after column 1. (GIRODER)

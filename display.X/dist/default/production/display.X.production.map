@@ -1,0 +1,93 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Fri May 19 08:56:08 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00014a
+                   .cinit    romdata   0x0000a5    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/DISP.O       code   0x002007    program   0x000002
+.config_2008_BUILD/DEFAULT/PRODUCTION/DISP.O       code   0x002008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0000a6      
+                            0x002007    0x002008      
+            169 out of 8455 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+       AplicacionDeCambio   0x000022    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                BORRARLCD   0x000090    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+              CURSORACASA   0x000098    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+           CambioDePrueba   0x000015    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+           ELIMINADOR21MS   0x00004f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+              ENCENDERLCD   0x000088    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                 LCDSTART   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                 LCDWRITE   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+          MODODEOPERACION   0x000080    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                       N2   0x00003c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                  NUMBERS   0x000031    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                  SHOWLED   0x000028    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+               STARTWRITE   0x0000a0    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                   T3SECS   0x000073    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                       TA   0x000051    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA15   0x00006c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA30   0x00005a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA39   0x000063    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA3S   0x000075    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TB3S   0x000077    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                       TC   0x000053    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC15   0x00006e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC30   0x00005c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC39   0x000065    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC3S   0x000079    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                 TECLADOM   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+             TIEMPO1_52MS   0x00006a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+               TIEMPO30MS   0x000058    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+               TIEMPO39uS   0x000061    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                 LCDSTART   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                 LCDWRITE   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                 TECLADOM   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+           CambioDePrueba   0x000015    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+       AplicacionDeCambio   0x000022    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                  SHOWLED   0x000028    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                  NUMBERS   0x000031    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                       N2   0x00003c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+           ELIMINADOR21MS   0x00004f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                       TA   0x000051    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                       TC   0x000053    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+               TIEMPO30MS   0x000058    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA30   0x00005a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC30   0x00005c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+               TIEMPO39uS   0x000061    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA39   0x000063    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC39   0x000065    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+             TIEMPO1_52MS   0x00006a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA15   0x00006c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC15   0x00006e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                   T3SECS   0x000073    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TA3S   0x000075    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TB3S   0x000077    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                     TC3S   0x000079    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+          MODODEOPERACION   0x000080    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+              ENCENDERLCD   0x000088    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+                BORRARLCD   0x000090    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+              CURSORACASA   0x000098    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+               STARTWRITE   0x0000a0    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/display.X/disp.asm
+
+

@@ -1,0 +1,52 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Tue Mar 28 12:00:07 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000a4
+                   .cinit    romdata   0x000052    program   0x000004
+.config_2007_BUILD/DEFAULT/DEBUG/RELOJ.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000053      
+                            0x002007    0x002007      
+            85 out of 1094 program addresses used, program memory utilization is 7%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   BCDa7S   0x000046    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                     DECS   0x000014    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       RA   0x00000b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       RB   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       RC   0x000011    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                    RELOJ   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       TA   0x000027    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       TB   0x000029    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+          shineForASecond   0x000025    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                    RELOJ   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       RA   0x00000b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       RB   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       RC   0x000011    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                     DECS   0x000014    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+          shineForASecond   0x000025    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       TA   0x000027    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                       TB   0x000029    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+                   BCDa7S   0x000046    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/Reloj.X/reloj.asm
+
+

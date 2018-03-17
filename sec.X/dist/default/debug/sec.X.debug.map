@@ -1,0 +1,74 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Tue Mar 14 22:48:28 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x0000a2
+                   .cinit    romdata   0x000051    program   0x000004
+.config_2007_BUILD/DEFAULT/DEBUG/P1.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000052      
+                            0x002007    0x002007      
+            84 out of 1094 program addresses used, program memory utilization is 7%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    ALGO2   0x00003b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 CODIGUIN   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                  FOOLISH   0x000046    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+               LEDITSHINE   0x000048    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     MOVA   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     MOVB   0x000027    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 MOVJLEDA   0x000034    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      PRA   0x00002e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      PRB   0x000031    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     PRIN   0x000004    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                       RE   0x00003f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     RESA   0x000024    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     RESB   0x00002b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      RMA   0x000026    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      RMB   0x00002d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 SHOWLEDA   0x000043    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 SHOWLEDB   0x000040    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                       TA   0x000017    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                       TB   0x000019    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     TIME   0x000015    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     PRIN   0x000004    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 CODIGUIN   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     TIME   0x000015    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                       TA   0x000017    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                       TB   0x000019    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     MOVA   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     RESA   0x000024    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      RMA   0x000026    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     MOVB   0x000027    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                     RESB   0x00002b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      RMB   0x00002d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      PRA   0x00002e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                      PRB   0x000031    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 MOVJLEDA   0x000034    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                    ALGO2   0x00003b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                       RE   0x00003f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 SHOWLEDB   0x000040    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                 SHOWLEDA   0x000043    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+                  FOOLISH   0x000046    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+               LEDITSHINE   0x000048    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/sec.X/p1.asm
+
+

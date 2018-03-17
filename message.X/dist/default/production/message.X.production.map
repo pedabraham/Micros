@@ -1,0 +1,85 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Fri May 19 09:25:10 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00017c
+                   .cinit    romdata   0x0000be    program   0x000004
+.config_2007_BUILD/DEFAULT/PRODUCTION/LOVE.O       code   0x002007    program   0x000002
+.config_2008_BUILD/DEFAULT/PRODUCTION/LOVE.O       code   0x002008    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0000bf      
+                            0x002007    0x002008      
+            194 out of 8455 program addresses used, program memory utilization is 2%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                    BORRA   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                BORRARLCD   0x0000a1    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+              CURSORACASA   0x0000a9    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+              CURSORAOTRA   0x0000b1    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+           ELIMINADOR21MS   0x000060    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+              ENCENDERLCD   0x000099    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                 LCDSTART   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                 LCDWRITE   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+          MODODEOPERACION   0x000091    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+               STARTWRITE   0x0000b9    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                   T3SECS   0x000084    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                       TA   0x000062    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA15   0x00007d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA30   0x00006b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA39   0x000074    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA3S   0x000086    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TB3S   0x000088    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                       TC   0x000064    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC15   0x00007f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC30   0x00006d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC39   0x000076    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC3S   0x00008a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+             TIEMPO1_52MS   0x00007b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+               TIEMPO30MS   0x000069    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+               TIEMPO39uS   0x000072    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                 LCDSTART   0x000008    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                    BORRA   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                 LCDWRITE   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+           ELIMINADOR21MS   0x000060    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                       TA   0x000062    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                       TC   0x000064    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+               TIEMPO30MS   0x000069    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA30   0x00006b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC30   0x00006d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+               TIEMPO39uS   0x000072    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA39   0x000074    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC39   0x000076    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+             TIEMPO1_52MS   0x00007b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA15   0x00007d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC15   0x00007f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                   T3SECS   0x000084    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TA3S   0x000086    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TB3S   0x000088    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                     TC3S   0x00008a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+          MODODEOPERACION   0x000091    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+              ENCENDERLCD   0x000099    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+                BORRARLCD   0x0000a1    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+              CURSORACASA   0x0000a9    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+              CURSORAOTRA   0x0000b1    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+               STARTWRITE   0x0000b9    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm
+
+

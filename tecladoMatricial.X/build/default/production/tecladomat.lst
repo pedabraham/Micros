@@ -1,0 +1,279 @@
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   5-12-2017  13:12:01         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (__CONFIG)
+2007   3FF1           00001 __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+                      00002     LIST P=16F84A
+                      00003     INCLUDE <P16F84.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Nov 17 2016
+                      00005 ;  MPASM PIC16F84 processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2016 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+Message[301]: MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+                      00207         LIST
+                      00004     ORG 0
+                      00005     
+  0000000C            00006 COLUM   EQU 0X0C
+  0000000D            00007 ROW     EQU 0X0D
+  0000000E            00008 CEROP   EQU 0X0E
+  0000000F            00009 CONTC   EQU 0X0F
+  00000010            00010 CONTMOS EQU 0X10
+  00000011            00011 JUSTC   EQU 0X11
+                      00012     
+0000                  00013 INICIO 
+                      00014             
+0000   1683           00015         BSF     STATUS,RP0
+0001   300F           00016         MOVLW   B'00001111'
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0002   1381           00017         BCF     OPTION_REG,NOT_RBPU
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0003   0086           00018         MOVWF   TRISB
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0004   0185           00019         CLRF    TRISA
+0005   1283           00020         BCF     STATUS,RP0
+                      00021         
+0006   018E           00022         CLRF    CEROP
+                      00023         
+0007                  00024 PROGRAMA
+0007   0190           00025         CLRF    CONTMOS
+0008   3004           00026         MOVLW   D'4'
+0009   008F           00027         MOVWF   CONTC
+000A   30EF           00028         MOVLW   B'11101111'
+000B   008C           00029         MOVWF   COLUM
+000C                  00030 CambioDePrueba
+                      00031         
+000C   080C           00032         MOVF    COLUM,0
+000D   0086           00033         MOVWF   PORTB
+000E   0806           00034         MOVF    PORTB,0
+000F   390F           00035         ANDLW   B'00001111'
+0010   008D           00036         MOVWF   ROW
+                      00037         
+0011   090D           00038         COMF    ROW,0
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   5-12-2017  13:12:01         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0012   390F           00039         ANDLW   B'00001111'
+0013   008D           00040         MOVWF   ROW
+                      00041         
+0014   080D           00042         MOVF    ROW,0
+0015   020E           00043         SUBWF   CEROP,0
+0016   1903           00044         BTFSC   STATUS,Z
+                      00045         
+0017   2???           00046         GOTO    AplicacionDeCambio; SI ES IGUAL
+                      00047         
+0018   2???           00048         CALL    SHOWLED; DE LO CONTRARIO
+                      00049         
+0019                  00050 AplicacionDeCambio
+                      00051         
+Message[305]: Using default destination of 1 (file).
+0019   0D8C           00052         RLF     COLUM
+                      00053         
+                      00054         
+001A   3004           00055         MOVLW   D'4'
+001B   0790           00056         ADDWF   CONTMOS,1
+                      00057         
+Message[305]: Using default destination of 1 (file).
+001C   0B8F           00058         DECFSZ  CONTC
+001D   2???           00059         GOTO    CambioDePrueba
+001E   2???           00060         GOTO    PROGRAMA
+                      00061         
+001F                  00062 SHOWLED
+                      00063         
+001F   080D           00064         MOVF    ROW,0
+0020   2???           00065         CALL    NUMBERS
+0021   0710           00066         ADDWF   CONTMOS,0
+0022   0091           00067         MOVWF   JUSTC
+                      00068         
+0023   2???           00069         CALL    N2
+                      00070         
+0024   0085           00071         MOVWF   PORTA
+0025   0008           00072         RETURN
+                      00073         
+                      00074         
+0026                  00075 NUMBERS
+0026   0782           00076     ADDWF   PCL,F
+0027   3400           00077     RETLW   D'0';0
+0028   3401           00078     RETLW   D'1';1
+0029   3402           00079     RETLW   D'2';2
+002A   3400           00080     RETLW   D'0';3
+002B   3403           00081     RETLW   D'3';4
+002C   3400           00082     RETLW   D'0';5
+002D   3400           00083     RETLW   D'0';6
+002E   3400           00084     RETLW   D'0';7
+002F   3404           00085     RETLW   D'4';8
+0030   0008           00086     RETURN
+                      00087     
+0031                  00088 N2
+0031   0782           00089     ADDWF   PCL,F
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   5-12-2017  13:12:01         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0032   3400           00090     RETLW   D'0';0
+0033   3401           00091     RETLW   D'1';1
+0034   3404           00092     RETLW   D'4';2
+0035   3407           00093     RETLW   D'7';3
+0036   340E           00094     RETLW   D'14';4
+0037   3402           00095     RETLW   D'2';5
+0038   3405           00096     RETLW   D'5';6
+0039   3408           00097     RETLW   D'8';7
+003A   3400           00098     RETLW   D'0';8
+003B   3403           00099     RETLW   D'3';9
+003C   3406           00100     RETLW   D'6';10
+003D   3409           00101     RETLW   D'9';11
+003E   340F           00102     RETLW   D'15';12
+003F   340A           00103     RETLW   D'10';13
+0040   340B           00104     RETLW   D'11';
+0041   340C           00105     RETLW   D'12';
+0042   340D           00106     RETLW   D'13';
+0043   0008           00107     RETURN
+                      00108         
+Warning[205]: Found directive in column 1. (END)
+3FF1                  00109 END
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   5-12-2017  13:12:01         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+AplicacionDeCambio                00000019
+C                                 00000000
+CEROP                             0000000E
+COLUM                             0000000C
+CONTC                             0000000F
+CONTMOS                           00000010
+CambioDePrueba                    0000000C
+DC                                00000001
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INDF                              00000000
+INICIO                            00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+JUSTC                             00000011
+N2                                00000031
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+NUMBERS                           00000026
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PROGRAMA                          00000007
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   5-12-2017  13:12:01         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+ROW                               0000000D
+RP0                               00000005
+RP1                               00000006
+SHOWLED                           0000001F
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   5-12-2017  13:12:01         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+Errors   :     0
+Warnings :     2 reported,     0 suppressed
+Messages :     6 reported,     0 suppressed
+
+

@@ -1,0 +1,219 @@
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   3-14-2017  14:13:22         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+2007   3FF1           00001     __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+                      00002     LIST P=16F84A
+                      00003     INCLUDE <P16F84A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Nov 17 2016
+                      00005 ;  MPASM PIC16F84A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2016 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00209         LIST
+                      00004     ORG 0
+                      00005     
+  0000000F            00006 CONT    EQU     0X0F
+  00000011            00007 CONT2   EQU     0X11
+  00000012            00008 CONT3   EQU     0X12
+  0000000C            00009 REG     EQU     0X0C
+                      00010 
+                      00011 
+                      00012     
+0000                  00013 INICIO 
+                      00014             
+0000   1683           00015         BSF     STATUS,RP0
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0186           00016         CLRF    TRISB
+0002   3001           00017         MOVLW   B'00000001'
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0003   0085           00018         MOVWF   TRISA
+0004   1283           00019         BCF     STATUS,RP0
+                      00020         
+0005   018C           00021         CLRF    REG
+                      00022                     
+0006                  00023 PRIN    
+0006   080C           00024         MOVF    REG,0
+0007   0086           00025         MOVWF   PORTB
+0008   2???           00026         CALL    TIME
+0009   1C05           00027         BTFSS   PORTA,0
+000A   2???           00028         GOTO    INC_CONT
+000B   2???           00029         GOTO    DEC_CONT
+                      00030         
+000C                  00031 INC_CONT
+000C   0A8C           00032         INCF    REG,1
+000D   2???           00033         GOTO    PRIN
+000E                  00034 DEC_CONT
+000E   038C           00035         DECF    REG,1
+000F   2???           00036         GOTO    PRIN
+                      00037 
+                      00038 
+                      00039         
+0010                  00040 TIME
+0010   301E           00041         MOVLW   D'30';TENEMOS UNA RUTINA DE TIEMPO DE APROXIMADAMENTE DE UN SEGUNDO
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   3-14-2017  14:13:22         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0011   008F           00042         MOVWF   CONT
+0012                  00043 TA
+0012   3064           00044         MOVLW   D'100'
+0013   0091           00045         MOVWF   CONT2
+0014                  00046 TB      
+0014   3064           00047         MOVLW   D'100'
+0015   0092           00048         MOVWF   CONT3
+0016                  00049 TC
+Message[305]: Using default destination of 1 (file).
+0016   0B92           00050         DECFSZ  CONT3
+0017   2???           00051         GOTO    TC
+Message[305]: Using default destination of 1 (file).
+0018   0B91           00052         DECFSZ  CONT2
+0019   2???           00053         GOTO    TB
+Message[305]: Using default destination of 1 (file).
+001A   0B8F           00054         DECFSZ  CONT
+001B   2???           00055         GOTO    TA
+001C   0008           00056         RETURN
+                      00057         
+3FF1                  00058     END
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   3-14-2017  14:13:22         PAGE  3
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+CONT                              0000000F
+CONT2                             00000011
+CONT3                             00000012
+DC                                00000001
+DEC_CONT                          0000000E
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+INC_CONT                          0000000C
+INDF                              00000000
+INICIO                            00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PRIN                              00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+REG                               0000000C
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   3-14-2017  14:13:22         PAGE  4
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RP0                               00000005
+RP1                               00000006
+STATUS                            00000003
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TA                                00000012
+TB                                00000014
+TC                                00000016
+TIME                              00000010
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   3-14-2017  14:13:22         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+Errors   :     0
+Warnings :     0 reported,     0 suppressed
+Messages :     5 reported,     0 suppressed
+
+

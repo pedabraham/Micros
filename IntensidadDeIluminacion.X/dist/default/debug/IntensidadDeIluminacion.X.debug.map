@@ -1,0 +1,60 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Wed May  3 09:34:34 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x00008e
+                   .cinit    romdata   0x000047    program   0x000004
+.config_2007_BUILD/DEFAULT/DEBUG/INTENSIDAD.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000048      
+                            0x002007    0x002007      
+            74 out of 1094 program addresses used, program memory utilization is 6%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                 FUNCPRIN   0x000032    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                 PROGRAMA   0x000006    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T1   0x00001b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T2   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T3   0x000021    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T4   0x000024    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T5   0x000027    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T6   0x00002a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T7   0x00002d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T8   0x000030    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       TA   0x000040    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       TC   0x000042    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                     TIME   0x00003e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                 PROGRAMA   0x000006    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T1   0x00001b    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T2   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T3   0x000021    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T4   0x000024    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T5   0x000027    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T6   0x00002a    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T7   0x00002d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       T8   0x000030    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                 FUNCPRIN   0x000032    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                     TIME   0x00003e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       TA   0x000040    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+                       TC   0x000042    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm
+
+

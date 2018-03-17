@@ -1,0 +1,13 @@
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 1 : Found directive in column 1. (__CONFIG)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 7 : Found label after column 1. (INICIO)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 11 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 13 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 14 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 15 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 18 : Found label after column 1. (SIGUE)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 25 : Found label after column 1. (PIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 29 : Found label after column 1. (PDER)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 36 : Found label after column 1. (GIROIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 40 : Found label after column 1. (GIRODER)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidorDeLineas.X/seguidorA.asm 44 : Found label after column 1. (ADELANTE)

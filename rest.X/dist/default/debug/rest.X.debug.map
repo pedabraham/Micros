@@ -1,0 +1,44 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Tue Apr 25 13:43:03 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000036
+                   .cinit    romdata   0x00001b    program   0x000004
+.config_2007_BUILD/DEFAULT/DEBUG/R1.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00001c      
+                            0x002007    0x002007      
+            30 out of 1094 program addresses used, program memory utilization is 2%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                 PROGRAMA   0x000004    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                       TA   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                       TB   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                       TC   0x000014    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                     TIME   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                 PROGRAMA   0x000004    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                     TIME   0x00000e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                       TA   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                       TB   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+                       TC   0x000014    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/rest.X/r1.asm
+
+

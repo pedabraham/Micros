@@ -1,0 +1,376 @@
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   6-16-2017  14:02:19         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[205]: Found directive in column 1. (__CONFIG)
+2007   3FF1           00001 __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+                      00002     LIST P=16F84A
+                      00003     INCLUDE <P16F84A.INC>
+                      00001         LIST
+                      00002 
+                      00003 ;==========================================================================
+                      00004 ; Build date : Nov 17 2016
+                      00005 ;  MPASM PIC16F84A processor include
+                      00006 ; 
+                      00007 ;  (c) Copyright 1999-2016 Microchip Technology, All rights reserved
+                      00008 ;==========================================================================
+                      00009 
+                      00209         LIST
+                      00004     ORG 0
+                      00005     
+Warning[207]: Found label after column 1. (SEGUNDOSR)
+  0000000C            00006    SEGUNDOSR    EQU     0X0C
+Warning[207]: Found label after column 1. (MINUTOSR)
+  0000000D            00007    MINUTOSR    EQU      0X0D
+Warning[207]: Found label after column 1. (HORASR)
+  0000000E            00008    HORASR       EQU     0X0E
+Warning[207]: Found label after column 1. (SECL)
+  0000000F            00009    SECL EQU     0X0F    
+Warning[207]: Found label after column 1. (MINL)
+  00000010            00010    MINL EQU     0X10
+Warning[207]: Found label after column 1. (HORL)
+  00000011            00011    HORL EQU     0X11
+Warning[207]: Found label after column 1. (VUELTAS)
+  00000012            00012    VUELTAS      EQU     0X12
+Warning[207]: Found label after column 1. (TGIRO)
+  00000013            00013    TGIRO        EQU     0X13
+Warning[207]: Found label after column 1. (CONTHORAS)
+  00000014            00014    CONTHORAS    EQU     0X14
+Warning[207]: Found label after column 1. (CONTMIN)
+  00000015            00015    CONTMIN      EQU     0X15
+Warning[207]: Found label after column 1. (CONTSEC)
+  00000016            00016    CONTSEC      EQU     0X16
+Warning[207]: Found label after column 1. (LETREG)
+  00000017            00017    LETREG       EQU     0X17
+Warning[207]: Found label after column 1. (VUELTAS2)
+  00000018            00018     VUELTAS2    EQU     0X18
+                      00019         
+                      00020     
+Warning[207]: Found label after column 1. (INICIO)
+0000                  00021    INICIO
+0000   1683           00022     BSF STATUS,RP0
+Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
+0001   0186           00023     CLRF    TRISB
+0002   1283           00024     BCF STATUS,RP0
+                      00025     
+0003   018C           00026     CLRF    SEGUNDOSR
+0004   018D           00027     CLRF    MINUTOSR
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   6-16-2017  14:02:19         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0005   018E           00028     CLRF    HORASR
+0006   018F           00029     CLRF    SECL
+0007   0190           00030     CLRF    MINL
+0008   0191           00031     CLRF    HORL
+                      00032     
+                      00033 
+                      00034     
+                      00035     
+Warning[207]: Found label after column 1. (RELOJ)
+0009                  00036    RELOJ
+                      00037     
+0009   018E           00038         CLRF    HORASR
+000A   303C           00039         MOVLW   D'60'
+000B   0094           00040         MOVWF   CONTHORAS
+000C   018D           00041         CLRF    MINUTOSR
+Warning[207]: Found label after column 1. (HPS)
+000D                  00042    HPS
+000D   303C           00043         MOVLW   D'60'
+000E   0095           00044         MOVWF   CONTMIN
+000F   018C           00045         CLRF    SEGUNDOSR
+Warning[207]: Found label after column 1. (MPS)
+0010                  00046    MPS
+0010   303C           00047         MOVLW   D'60'
+0011   0096           00048         MOVWF   CONTSEC
+                      00049         
+                      00050         
+Warning[207]: Found label after column 1. (SPS)
+0012                  00051    SPS  
+0012   2???           00052         CALL    GIROSEC
+Message[305]: Using default destination of 1 (file).
+0013   0A8C           00053         INCF    SEGUNDOSR
+Message[305]: Using default destination of 1 (file).
+0014   0B96           00054         DECFSZ  CONTSEC
+0015   2???           00055         GOTO    SPS
+                      00056         
+                      00057     
+Message[305]: Using default destination of 1 (file).
+0016   0A8D           00058         INCF    MINUTOSR
+Message[305]: Using default destination of 1 (file).
+0017   0B95           00059         DECFSZ  CONTMIN
+0018   2???           00060         GOTO    MPS
+                      00061         
+                      00062     
+Message[305]: Using default destination of 1 (file).
+0019   0A8E           00063         INCF    HORASR
+Message[305]: Using default destination of 1 (file).
+001A   0B94           00064         DECFSZ  CONTHORAS
+001B   2???           00065         GOTO    MPS
+001C   2???           00066         GOTO    RELOJ
+                      00067 
+                      00068         
+001D   2???           00069         GOTO    RELOJ
+                      00070     
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   6-16-2017  14:02:19         PAGE  3
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+Warning[207]: Found label after column 1. (GIROSEC)
+001E                  00071    GIROSEC
+                      00072         
+001E   30FF           00073         MOVLW   D'255';SE DEBE DE AJUSTAR AL NUMERO DE VUELTAS EN UN 1SEC
+001F   0098           00074         MOVWF   VUELTAS2
+Warning[207]: Found label after column 1. (V2)
+0020                  00075    V2
+0020   30FF           00076         MOVLW   D'255';SE DEBE DE AJUSTAR AL NUMERO DE VUELTAS EN UN 1SEC
+0021   0092           00077         MOVWF   VUELTAS
+Warning[207]: Found label after column 1. (V)
+0022                  00078    V
+0022   2???           00079         CALL    TSOLOGIRO
+Message[305]: Using default destination of 1 (file).
+0023   0B92           00080         DECFSZ  VUELTAS
+0024   2???           00081         GOTO    V
+                      00082         
+Message[305]: Using default destination of 1 (file).
+0025   0B98           00083         DECFSZ  VUELTAS2
+0026   2???           00084         GOTO    V2 
+                      00085         
+0027   0008           00086         RETURN
+                      00087         
+                      00088     
+                      00089     
+                      00090     
+Warning[207]: Found label after column 1. (TSOLOGIRO)
+0028                  00091    TSOLOGIRO ;RUTINA DE UN  SOLO GIRO
+0028   080C           00092         MOVF    SEGUNDOSR,0
+0029   008F           00093         MOVWF   SECL
+002A   080D           00094         MOVF    MINUTOSR,0
+002B   0090           00095         MOVWF   MINL
+002C   080E           00096         MOVF    HORASR,0
+002D   0091           00097         MOVWF   HORL
+002E   303C           00098         MOVLW   D'60'
+002F   0093           00099         MOVWF   TGIRO
+0030   3000           00100         MOVLW   B'00000000'
+0031   0086           00101         MOVWF   PORTB
+Warning[207]: Found label after column 1. (LETANIA)
+0032                  00102    LETANIA
+0032   30FF           00103         MOVLW   D'255';SECUENCIAS DE REPETICON PARA HACER UNA ESPERA MAS GRANDE
+0033   0097           00104         MOVWF   LETREG
+Warning[207]: Found label after column 1. (LET)
+0034                  00105    LET
+0034   0000           00106         NOP
+Message[305]: Using default destination of 1 (file).
+0035   0B97           00107         DECFSZ  LETREG
+0036   2???           00108         GOTO LET
+                      00109         
+Warning[207]: Found label after column 1. (T)
+0037                  00110    T
+Message[305]: Using default destination of 1 (file).
+0037   0B8F           00111         DECFSZ  SECL
+0038   2???           00112         GOTO    M
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   6-16-2017  14:02:19         PAGE  4
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+0039   2???           00113         CALL    OFFSEC
+Warning[207]: Found label after column 1. (M)
+Message[305]: Using default destination of 1 (file).
+003A   0B90           00114    M    DECFSZ  MINL
+003B   2???           00115         GOTO    H
+003C   2???           00116         CALL    OFFMIN
+Warning[207]: Found label after column 1. (H)
+Message[305]: Using default destination of 1 (file).
+003D   0B91           00117    H    DECFSZ  HORL
+003E   2???           00118         GOTO    DG
+003F   2???           00119         CALL    OFFHORA   
+Warning[207]: Found label after column 1. (DG)
+Message[305]: Using default destination of 1 (file).
+0040   0B93           00120    DG   DECFSZ  TGIRO
+0041   2???           00121         GOTO    LETANIA
+0042   0008           00122         RETURN
+                      00123         
+Warning[207]: Found label after column 1. (OFFSEC)
+0043                  00124    OFFSEC
+0043   0806           00125         MOVF    PORTB,0
+0044   39FC           00126         ANDLW   B'11111100'
+0045   0086           00127         MOVWF   PORTB
+0046   0008           00128     RETURN
+                      00129     
+Warning[207]: Found label after column 1. (OFFMIN)
+0047                  00130    OFFMIN
+0047   0806           00131         MOVF    PORTB,0
+0048   39FA           00132         ANDLW   B'11111010'
+0049   0086           00133         MOVWF   PORTB
+004A   0008           00134     RETURN
+                      00135     
+Warning[207]: Found label after column 1. (OFFHORA)
+004B                  00136    OFFHORA
+004B   0806           00137         MOVF    PORTB,0
+004C   39F9           00138         ANDLW   B'11111001'
+004D   0086           00139         MOVWF   PORTB
+004E   0008           00140     RETURN
+                      00141 
+Warning[205]: Found directive in column 1. (END)
+3FF1                  00142 END
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   6-16-2017  14:02:19         PAGE  5
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+C                                 00000000
+CONTHORAS                         00000014
+CONTMIN                           00000015
+CONTSEC                           00000016
+DC                                00000001
+DG                                00000040
+EEADR                             00000009
+EECON1                            00000088
+EECON2                            00000089
+EEDATA                            00000008
+EEIE                              00000006
+EEIF                              00000004
+F                                 00000001
+FSR                               00000004
+GIE                               00000007
+GIROSEC                           0000001E
+H                                 0000003D
+HORASR                            0000000E
+HORL                              00000011
+HPS                               0000000D
+INDF                              00000000
+INICIO                            00000000
+INTCON                            0000000B
+INTE                              00000004
+INTEDG                            00000006
+INTF                              00000001
+IRP                               00000007
+LET                               00000034
+LETANIA                           00000032
+LETREG                            00000017
+M                                 0000003A
+MINL                              00000010
+MINUTOSR                          0000000D
+MPS                               00000010
+NOT_PD                            00000003
+NOT_RBPU                          00000007
+NOT_TO                            00000004
+OFFHORA                           0000004B
+OFFMIN                            00000047
+OFFSEC                            00000043
+OPTION_REG                        00000081
+PCL                               00000002
+PCLATH                            0000000A
+PORTA                             00000005
+PORTB                             00000006
+PS0                               00000000
+PS1                               00000001
+PS2                               00000002
+PSA                               00000003
+RA0                               00000000
+RA1                               00000001
+RA2                               00000002
+RA3                               00000003
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   6-16-2017  14:02:19         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+RA4                               00000004
+RB0                               00000000
+RB1                               00000001
+RB2                               00000002
+RB3                               00000003
+RB4                               00000004
+RB5                               00000005
+RB6                               00000006
+RB7                               00000007
+RBIE                              00000003
+RBIF                              00000000
+RD                                00000000
+RELOJ                             00000009
+RP0                               00000005
+RP1                               00000006
+SECL                              0000000F
+SEGUNDOSR                         0000000C
+SPS                               00000012
+STATUS                            00000003
+T                                 00000037
+T0CS                              00000005
+T0IE                              00000005
+T0IF                              00000002
+T0SE                              00000004
+TGIRO                             00000013
+TMR0                              00000001
+TMR0IE                            00000005
+TMR0IF                            00000002
+TRISA                             00000085
+TRISA0                            00000000
+TRISA1                            00000001
+TRISA2                            00000002
+TRISA3                            00000003
+TRISA4                            00000004
+TRISB                             00000086
+TRISB0                            00000000
+TRISB1                            00000001
+TRISB2                            00000002
+TRISB3                            00000003
+TRISB4                            00000004
+TRISB5                            00000005
+TRISB6                            00000006
+TRISB7                            00000007
+TSOLOGIRO                         00000028
+V                                 00000022
+V2                                00000020
+VUELTAS                           00000012
+VUELTAS2                          00000018
+W                                 00000000
+WR                                00000001
+WREN                              00000002
+WRERR                             00000003
+Z                                 00000002
+MPASM 5.71  /USERS/PEDROAM/DOCUMENTS/MICROCO   6-16-2017  14:02:19         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+_CONFIG                           00002007
+_CP_OFF                           00003FFF
+_CP_ON                            0000000F
+_DEVID1                           00002006
+_FOSC_EXTRC                       00003FFF
+_FOSC_HS                          00003FFE
+_FOSC_LP                          00003FFC
+_FOSC_XT                          00003FFD
+_HS_OSC                           00003FFE
+_IDLOC0                           00002000
+_IDLOC1                           00002001
+_IDLOC2                           00002002
+_IDLOC3                           00002003
+_LP_OSC                           00003FFC
+_PWRTE_OFF                        00003FFF
+_PWRTE_ON                         00003FF7
+_RC_OSC                           00003FFF
+_WDTE_OFF                         00003FFB
+_WDTE_ON                          00003FFF
+_WDT_OFF                          00003FFB
+_WDT_ON                           00003FFF
+_XT_OSC                           00003FFD
+__16F84A                          00000001
+
+Errors   :     0
+Warnings :    33 reported,     0 suppressed
+Messages :    14 reported,     0 suppressed
+
+

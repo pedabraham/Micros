@@ -1,0 +1,7 @@
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/EXAMEN.X/ex1.asm 1 : Found directive in column 1. (__CONFIG)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/EXAMEN.X/ex1.asm 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/EXAMEN.X/ex1.asm 13 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/EXAMEN.X/ex1.asm 28 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/EXAMEN.X/ex1.asm 29 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/EXAMEN.X/ex1.asm 32 : Using default destination of 1 (file).
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/EXAMEN.X/ex1.asm 56 : Found directive in column 1. (END)

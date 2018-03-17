@@ -1,0 +1,17 @@
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 1 : Found directive in column 1. (__CONFIG)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 21 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 22 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 23 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 24 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 25 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 88 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 90 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 101 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 103 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 114 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 116 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 127 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 129 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 143 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 145 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/message.X/love.asm 147 : Using default destination of 1 (file).

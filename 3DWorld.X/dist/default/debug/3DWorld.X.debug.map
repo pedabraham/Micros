@@ -1,0 +1,66 @@
+MPLINK 5.08, LINKER
+Linker Map File - Created Thu Jun 15 22:48:49 2017
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000096
+                   .cinit    romdata   0x00004b    program   0x000004
+.config_2007_BUILD/DEFAULT/DEBUG/CLOCK3.O       code   0x002007    program   0x000002
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00004c      
+                            0x002007    0x002007      
+            78 out of 1094 program addresses used, program memory utilization is 7%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                       DG   0x00003c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                  GIROSEC   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        H   0x000039    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      HPS   0x00000d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      LET   0x000030    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                  LETANIA   0x00002e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        M   0x000036    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      MPS   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                  OFFHORA   0x000047    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                   OFFMIN   0x000043    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                   OFFSEC   0x00003f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                    RELOJ   0x000009    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      SPS   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        T   0x000033    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                TSOLOGIRO   0x000024    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        V   0x000020    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000000    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                    RELOJ   0x000009    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      HPS   0x00000d    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      MPS   0x000010    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      SPS   0x000012    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                  GIROSEC   0x00001e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        V   0x000020    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                TSOLOGIRO   0x000024    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                  LETANIA   0x00002e    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                      LET   0x000030    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        T   0x000033    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        M   0x000036    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                        H   0x000039    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                       DG   0x00003c    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                   OFFSEC   0x00003f    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                   OFFMIN   0x000043    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+                  OFFHORA   0x000047    program     static /Users/pedroam/Documents/Microcontroladores y microprocesadores/3DWorld.X/clock3.asm
+
+

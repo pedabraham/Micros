@@ -1,0 +1,4 @@
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/MASMENOS.X/MM.asm 13 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/MASMENOS.X/MM.asm 37 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/MASMENOS.X/MM.asm 39 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/MASMENOS.X/MM.asm 41 : Using default destination of 1 (file).

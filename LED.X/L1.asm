@@ -1,0 +1,16 @@
+    __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
+    LIST P = 16F84A
+    INCLUDE <P16F84A.INC>
+    ORG 0
+  
+INICIO
+    BSF	    STATUS,RP0
+    CLRF    TRISB
+    BCF	    STATUS,RP0
+    
+PROGRAMA
+    MOVLW   B'00001111'
+    MOVWF   PORTB
+    GOTO    PROGRAMA
+    
+    END

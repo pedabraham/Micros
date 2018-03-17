@@ -1,0 +1,9 @@
+Message[301] /Applications/microchip/mplabx/v3.50/mpasmx/P16F84.INC 34 : MESSAGE: (Processor-header file mismatch.  Verify selected processor.)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 16 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 18 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 22 : Using default destination of 1 (file).
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 81 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 84 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 94 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 100 : Using default destination of 1 (file).
+Message[305] /Users/pedroam/Documents/Microcontroladores y microprocesadores/IntensidadDeIluminacion.X/intensidad.asm 102 : Using default destination of 1 (file).

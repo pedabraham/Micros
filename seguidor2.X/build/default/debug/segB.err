@@ -1,0 +1,10 @@
+Warning[205] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 1 : Found directive in column 1. (__CONFIG)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 6 : Found label after column 1. (REGENT)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 8 : Found label after column 1. (INICIO)
+Message[302] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 12 : Register in operand not in bank 0.  Ensure that bank bits are correct.
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 17 : Found label after column 1. (SIGUE)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 32 : Found label after column 1. (RECTO)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 41 : Found label after column 1. (PIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 51 : Found label after column 1. (PDER)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 61 : Found label after column 1. (GIROIZQ)
+Warning[207] /Users/pedroam/Documents/Microcontroladores y microprocesadores/seguidor2.X/segB.asm 65 : Found label after column 1. (GIRODER)
