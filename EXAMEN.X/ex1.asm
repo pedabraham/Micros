@@ -54,8 +54,3 @@ SHOWSEC
 
 
 END
-     
-     ;Pedro Abraham Moreno Vázquez
-     ;Microprocesadores y microcontroladores
-     ;Examen 7/04/2017 
-     ;Ejercicio 2a
